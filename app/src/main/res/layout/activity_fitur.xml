@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".FiturActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pink"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_constraintBaseline_toBaselineOf="parent">
+
+        <RelativeLayout
+            android:layout_width="408dp"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="500dp"
+                android:layout_height="150dp"
+                android:text="FITUR"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+        </RelativeLayout>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.5"
+            android:columnCount="1"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:padding="15dp">
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/pink2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="330dp"
+                    android:layout_height="480dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="470dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="100dp"
+                        android:text="• Pregnancies (Kehamilan): Jumlah kehamilan yang dialami pasien\n\n• Glucose (Glukosa): Kadar glukosa darah pasien\n\n• Blood Pressure (Tekanan Darah): Tekanan darah pasien\n\n• Skin Thickness (Ketebalan Kulit): Tebal lipatan kulit pasien\n\n• BMI (Body Mass Index): Indeks Massa Tubuh\n\n• Diabetes Pedigree Function: Fungsi riwayat diabetes dalam keluarga pasien\n\n• Age (Umur): Usia pasien\n\n• Outcome (Hasil): Status diabetes pasien"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
